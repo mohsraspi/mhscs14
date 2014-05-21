@@ -9,6 +9,6 @@ while f == 10:
     y= position.y
     z= position.z
 
-    mc.setBlock(x,y-1,z,85)
+    mc.setBlock(x,y-1,z,41)
 
 
