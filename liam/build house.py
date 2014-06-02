@@ -1,6 +1,7 @@
-import mcpi.minecraft as minecraft
+import bob.minecraft as minecraft
 mc = minecraft.Minecraft.create()
-
+import time
+import random
 ##position = mc.player.getTilePos()
 ##x= position.x
 ##y= position.y
@@ -19,7 +20,7 @@ def makeS():
     mc.setBlocks(-20,-20,-20,20,60,20,20)
     for x in [-20,-7,7,20]:
         for z in [-20,-7,7,20]:
-            mc.setBlocks(x,-20,z,x,60,z,17,1)
+            mc.setBlocks(x,-25,z,x,60,z,17,1)
             
    
 def makeD():
@@ -93,48 +94,229 @@ def Kit():
     
 def Torch():
     for y in [-20,-10,0,10,20,30,40,50]:
-        mc.setBlock(-3,y+5,-19,50,5)
-        mc.setBlock(3,y+5,-19,50,5)
-        mc.setBlock(-3,y+5,19,50,5)
-        mc.setBlock(3,y+5,19,50,5)
+        mc.setBlock(-3,y+5,-20,17)
+        mc.setBlock(3,y+5,-20,17)
+        mc.setBlock(-3,y+5,20,17)
+        mc.setBlock(3,y+5,20,17)
+        mc.setBlock(-20,y+5,-3,17)
+        mc.setBlock(20,y+5,-3,17)
+        mc.setBlock(-20,y+5,3,17)
+        mc.setBlock(20,y+5,3,17)
+        mc.setBlock(-3,y+5,-19,50)
+        mc.setBlock(3,y+5,-19,50)
+        mc.setBlock(-3,y+5,19,50)
+        mc.setBlock(3,y+5,19,50)
+        mc.setBlock(-19,y+5,-3,50)
+        mc.setBlock(19,y+5,-3,50)
+        mc.setBlock(-19,y+5,3,50)
+        mc.setBlock(19,y+5,3,50)
+        mc.setBlock(-3,y+5,-21,50)
+        mc.setBlock(3,y+5,-21,50)
+        mc.setBlock(-3,y+5,21,50)
+        mc.setBlock(3,y+5,21,50)
+        mc.setBlock(-21,y+5,-3,50)
+        mc.setBlock(21,y+5,-3,50)
+        mc.setBlock(-21,y+5,3,50)
+        mc.setBlock(21,y+5,3,50)
         
     
+def BallR():
+    mc.setBlocks(-6,33,-6,6,39,6,0)
+    mc.setBlocks(-4,34,-4,4,34,4,85)
+    mc.setBlocks(-1,34,-5,1,34,5,85)
+    mc.setBlocks(-5,34,-1,5,34,1,85)
+    mc.setBlocks(-4,34,-4,-3,34,-3,0)
+    mc.setBlock(-3,34,-3,85)
+    mc.setBlocks(4,34,-4,3,34,-3,0)
+    mc.setBlock(3,34,-3,85)
+    mc.setBlocks(-4,34,4,-3,34,3,0)
+    mc.setBlock(-3,34,3,85)
+    mc.setBlocks(4,34,4,3,34,3,0)
+    mc.setBlock(3,34,3,85)
+    mc.setBlocks(-4,35,-4,4,35,4,50)
+    mc.setBlocks(-1,35,-5,1,35,5,50)
+    mc.setBlocks(-5,35,-1,5,35,1,50)
+    mc.setBlocks(-4,35,-4,-3,35,-3,0)
+    mc.setBlock(-3,35,-3,50)
+    mc.setBlocks(-3,35,-3,3,35,3,85)
+    mc.setBlocks(-1,35,-4,1,35,4,85)
+    mc.setBlocks(-4,35,-1,4,35,1,85)
+    mc.setBlock(-3,35,-3,50)
+    mc.setBlock(3,35,-3,50)
+    mc.setBlock(-3,35,3,50)
+    mc.setBlock(3,35,3,50)
+    mc.setBlocks(-3,36,-3,3,36,3,50)
+    mc.setBlocks(-1,36,-4,1,36,4,50)
+    mc.setBlocks(-4,36,-1,4,36,1,50)
+    mc.setBlocks(-1,36,-3,1,36,3,85)
+    mc.setBlocks(-3,36,-1,3,36,1,85)
+    mc.setBlock(-2,36,-2,85)
+    mc.setBlock(2,36,-2,85)
+    mc.setBlock(-2,36,2,85)
+    mc.setBlock(2,36,2,85)
+    mc.setBlocks(-1,37,-3,1,37,3,50)
+    mc.setBlocks(-3,37,-1,3,37,1,50)
+    mc.setBlock(-2,37,-2,50)
+    mc.setBlock(2,37,-2,50)
+    mc.setBlock(-2,37,2,50)
+    mc.setBlock(2,37,2,50)
+    mc.setBlocks(-1,37,-2,1,37,2,85)
+    mc.setBlocks(-2,37,-1,2,37,1,85)
+    mc.setBlocks(-1,38,-2,1,38,2,50)
+    mc.setBlocks(-2,38,-1,2,38,1,50)
+    mc.setBlocks(0,38,-1,0,38,1,85)
+    mc.setBlocks(-1,38,0,1,38,0,85)
+    mc.setBlocks(0,39,-1,0,39,1,50)
+    mc.setBlocks(-1,39,0,1,39,0,50)
+    mc.setBlock(0,39,0,85)
+    
+def BallR2():
+    mc.setBlocks(-11,31,-11,11,31,11,44)
+    for x in [-10,-8,-6,-4,-2,0,2,4,6,8,10]:
+        for z in [-10,-8,-6,-4,-2,0,2,4,6,8,10]:
+            mc.setBlock(x,31,z,44,1)
+    for x in [-11,-9,-7,-5,-3,-1,1,3,5,7,9,11]:
+        for z in [-11,-9,-7,-5,-3,-1,1,3,5,7,9,11]:
+            mc.setBlock(x,31,z,44,1)
+
+def Bball():
+    mc.setBlocks(-8,10,-13,8,10,13,35,1)
+    mc.setBlocks(-8,10,0,8,10,0,35,0)
+    mc.setBlocks(0,11,-16,0,16,-16,35,8)
+    mc.setBlocks(0,11,16,0,16,16,35,8)
+    mc.setBlock(0,16,-15,35,8)
+    mc.setBlock(0,16,15,35,8)
+    mc.setBlocks(-2,17,-14,2,14,-14,35)
+    mc.setBlocks(-2,17,14,2,14,14,35)
+    mc.setBlocks(-1,16,-14,1,14,-14,35,14)
+    mc.setBlocks(-1,16,14,1,14,14,35,14)
+    mc.setBlock(0,15,-14,35,0)
+    mc.setBlock(0,15,14,35,0)
+    mc.setBlock(0,14,-13,35,1)
+    mc.setBlock(0,14,13,35,1)
+    mc.setBlock(0,13,-13,30)
+    mc.setBlock(0,13,13,30)
+    mc.setBlocks(-2,10,-13,-2,10,-5,35,0)
+    mc.setBlocks(2,10,-13,2,10,-5,35,0)
+    mc.setBlocks(-2,10,13,-2,10,5,35,0)
+    mc.setBlocks(2,10,13,2,10,5,35,0)
+    mc.setBlocks(-3,10,-5,3,10,-5,35,0)
+    mc.setBlocks(-3,10,5,3,10,5,35,0)
+    mc.setBlocks(-2,10,-8,2,10,-8,35,0)
+    mc.setBlocks(-2,10,8,2,10,8,35,0)
+    mc.setBlock(-4,10,-6,35,0)
+    mc.setBlock(4,10,-6,35,0)
+    mc.setBlock(-4,10,6,35,0)
+    mc.setBlock(4,10,6,35,0)
+    mc.setBlocks(-5,10,-7,-5,10,-8,35,0)
+    mc.setBlocks(5,10,-7,5,10,-8,35,0)
+    mc.setBlocks(-5,10,7,-5,10,8,35,0)
+    mc.setBlocks(5,10,7,5,10,8,35,0)
+    mc.setBlocks(-6,10,-9,-6,10,-10,35,0)
+    mc.setBlocks(6,10,-9,6,10,-10,35,0)
+    mc.setBlocks(-6,10,9,-6,10,10,35,0)
+    mc.setBlocks(6,10,9,6,10,10,35,0)
+    mc.setBlocks(-7,10,-11,-7,10,-13,35,0)
+    mc.setBlocks(7,10,-11,7,10,-13,35,0)
+    mc.setBlocks(-7,10,11,-7,10,13,35,0)
+    mc.setBlocks(7,10,11,7,10,13,35,0)
+    mc.setBlocks(-13,11,-13,-12,13,13,5)
+    mc.setBlocks(13,11,-13,12,13,13,5)
+    mc.setBlocks(-10,11,-13,-10,11,13,53,1)
+    mc.setBlocks(10,11,-13,10,11,13,53,0)
+    mc.setBlocks(-11,12,-13,-11,12,13,53,1)
+    mc.setBlocks(11,12,-13,11,12,13,53,0)
+    mc.setBlocks(-12,13,-13,-12,13,13,53,1)
+    mc.setBlocks(12,13,-13,12,13,13,53,0)
+    mc.setBlocks(-13,14,-13,-13,14,13,53,1)
+    mc.setBlocks(13,14,-13,13,14,13,53,0)
+    mc.setBlocks(-11,11,-13,-11,11,13,5)
+    mc.setBlocks(11,11,-13,11,11,13,5)
+    
+    for x in [-12,-9,-6,-3,0,3,6,9,12]:
+        for z in [-12,-9,-6,-3,0,3,6,9,12]:
+            mc.setBlock(x,19,z,89)
+    mc.setBlock(0,19,0,35,15)
+    mc.setBlocks(-1,17,-1,1,18,1,35,15)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def garden():
+    mc.setBlocks(-33,0,21,33,0,87,2)
+    mc.setBlocks(-33,-1,21,33,-5,87,3)
+    mc.setBlocks(-33,1,21,33,74,87,0)
+    mc.setBlocks(-33,20,21,33,20,87,20)
+    mc.setBlocks(-33,1,87,33,20,87,20)
+    mc.setBlocks(33,1,21,33,20,87,20)
+    mc.setBlocks(-33,1,21,-33,20,87,20)
+    mc.setBlocks(-33,1,20,-21,20,20,20)
+    mc.setBlocks(33,1,20,21,20,20,20)
+    mc.setBlock(-3,5,21,50)
+    mc.setBlock(3,5,21,50)
+    mc.setBlock(-3,15,21,50)
+    mc.setBlock(3,15,21,50)
+    for x in range(-5,5):
+        for z in range(-5,5):
+            w = random.randint(0,3)
+            mc.setBlock(x*6+3,0,(z*6)+57,3)
+            mc.setBlock(x*6+3,1,(z*6)+57,6,w)
+    mc.setBlocks(-1,0,21,1,0,87,5)
+    mc.setBlocks(-23,0,35,-25,0,73,5)
+    mc.setBlocks(23,0,35,25,0,73,5)
+    mc.setBlocks(-25,0,35,25,0,37,5)
+    mc.setBlocks(-25,0,71,25,0,73,5)
+    mc.setBlocks(-13,0,21,-11,0,89,8)
+    mc.setBlocks(13,0,21,11,0,89,8)
+    mc.setBlocks(-50,0,53,50,0,55,8)
+    mc.setBlocks(-2,1,87,2,5,87,0)
+    mc.setBlocks(-2,1,87,2,1,87,85)
+    mc.setBlock(0,1,87,107)
+    mc.setBlock(-3,5,87,17)
+    mc.setBlock(3,5,87,17)
+    mc.setBlock(-3,5,86,50)
+    mc.setBlock(3,5,86,50)
+    mc.setBlock(-3,5,88,50)
+    mc.setBlock(3,5,88,50)
+    bridge(0,54)
+    bridge(-24,54)
+    bridge(24,54)
+    bridge2(-12,72)
+    bridge2(-12,36)
+    bridge2(12,72)
+    bridge2(12,36)
+def tree(x,y,z,t,h):
+    pass
+def bridge(x,z):
+    mc.setBlocks(x-1,1,z-2,x+1,1,z-2,53,2)
+    mc.setBlocks(x-1,1,z+2,x+1,1,z+2,53,3)
+    mc.setBlocks(x-1,1,z-1,x+1,1,z-1,53,7)
+    mc.setBlocks(x-1,1,z+1,x+1,1,z+1,53,6)
+    mc.setBlocks(x-1,2,z-1,x+1,2,z+1,44,2)
+    
+def bridge2(x,z):
+    mc.setBlocks(x+2,1,z-1,x+2,1,z+1,53,1)
+    mc.setBlocks(x-1,1,z-1,x-1,1,z+1,53,5)
+    mc.setBlocks(x+1,1,z-1,x+1,1,z+1,53,4)
+    mc.setBlocks(x-1,2,z-1,x+1,2,z+1,44,2)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 
     
+def port():
+    mc.setBlocks(-20,0,-21,20,64,-50,0)                                                                                                                                                                                                             
+    mc.setBlocks(-20,-1,-21,20,-3,-50,8)                                                                                                                                                                                                                                                                                                                                                                                                                                               87,8)
 
-##mc.setBlocks(-20,-20,-20,20,60,20,5)
-##makeS()
-##mc.setBlocks(-19,-19,-19,19,59,19,0)
-##makeFloor()
-##mc.setBlocks(-19,60,-19,19,60,19,20)
-##mc.setBlocks(-20,61,-20,20,61,20,85)
-##mc.setBlocks(-19,61,-19,19,61,19,0)
-##makeD()
-##pool()
-##Lad()
-##Kit()
+mc.setBlocks(-20,-20,-20,20,60,20,5)
+makeS()
+mc.setBlocks(-19,-19,-19,19,59,19,0)
+makeFloor()
+mc.setBlocks(-19,60,-19,19,60,19,20)
+mc.setBlocks(-20,61,-20,20,61,20,85)
+mc.setBlocks(-19,61,-19,19,61,19,0)
+makeD()
+pool()
+Lad()
 Torch()
+Kit()
+BallR()
+BallR2()
+Bball()
+garden()
+port()
